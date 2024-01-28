@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Other head elements -->
+</head>
+<body>
+    {% for post in posts %}
+        <h2 class=" text-6xl">{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p>Author: {{ post.author.j_id }}</p>
+        <p>{{ post.body }}</p>
+    {% endfor %}
+</body>
+</html>
